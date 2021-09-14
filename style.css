@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+:root {
+  --blue: #0abde3;
+  --black: #130f40;
+  --light-color: #666;
+  --border: .1rem solid rgba(0, 0, 0, .1);
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 5rem;
+}
+ul{
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.item{
+  flex: 1 1 42rem;
+}
+/* common Button */
+.btn {
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--black);
+  padding: .9rem 3rem;
+  border-radius: .5rem;
+  display: inline-block;
+  margin-top: 2rem;
+}
+.btn:hover{
+  background-color: var(--blue);
+}
+/* Common Button End */
+
+.header{
+  display: flex;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 9%;
+  background-color: var(--black);
+  z-index: 1000;
+}
+.header .logo{
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bolder;
+  
+}
+.header .navbar a{
+  font-size: 1.7rem;
+  margin-left: 2.5rem;
+  color: #fff;
+}
+.header .navbar a:hover{
+  color: var(--blue);
+}
+#menu-btn{
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
+}
+/* Header Section CSS End */
+/* Home Section CSS Start */
+.home{
+  padding-top: 9rem;
+}
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.home .image{
+  flex: 1 1 42rem;
+}
+.home .image img{
+  width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.home .content{
+  flex: 1 1 42rem;
+}
+.home .content h1 {
+  font-size: 4rem;
+  line-height: 1.8;
+  color: var(--black);
+}
+
+.home .content p {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: .5rem 0;
+}
+
+/* Home Section CSS End */
+/* Service Section CSS Start */
+
+.service-area{
+  justify-content: space-between;
+}
+.head-title{
+  text-align: center;
+  color: var(--black);
+  font-size: 5rem;
+  padding-bottom: 2rem;
+}
+.service-area .single-service img{
+  height: 20rem;
+}
+.service-area .single-service{
+  flex: 1 1 36rem;
+  text-align: center;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 2.5rem;
+  border-radius: .5rem;
+}
+.head-title span {
+  position: relative;
+  z-index: 1000;
+}
+
+.head-title span::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 1.2rem;
+  background: var(--blue);
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(0% 90%, 100% 83%, 100% 100%, 0% 100%);
+}
+.service-area .single-service h4 {
+  font-size: 2.3rem;
+  /* line-height: 1.8; */
+}
+
+.service-area .single-service p {
+  font-size: 1.4rem;
+  color: var(--light-color);
+  padding: 1.5rem 0;
+}
+
+/* Service Section CSS End */
+/* About Section CSS Start */
+
+.about-area{
+
+}
+.about-wrapper .about-content h1 {
+  font-size: 3.8rem;
+  line-height: 1.6;
+  color: var(--black);
+  padding-bottom: 1.7rem;
+}
+.about-wrapper .about-content p {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+
+/* About Section CSS End */
+/* Plan Section CSS Start */
+
+.price-box h3{
+  font-size: 2rem;
+  color: var(--black);
+  line-height: 1.8;
+}
+.price-box h2{
+  font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+.price-box h2 span{
+  font-size: 6rem;
+  font-weight: 800;
+}
+.price-box ul li{
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  color: var(--light-color);
+}
+
+/* Plan Section CSS End */
+/* Clients Section CSS Start */
+
+.clients-review{
+  padding: 5rem 9%;
+}
+.single-service.clients-image img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  padding: 2rem;
+}
+.single-service.clients-image .stars {
+  padding: .8rem 0;
+}
+
+.single-service.clients-image .stars i {
+  color: var(--blue);
+  font-size: 1.5rem;
+}
+
+.single-service.clients-image .stars i:hover {
+  color: black;
+}
+
+/* Clients Section CSS End */
+
+/* Contact Us CSS Start */
+
+.contact-form{
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 3rem;
+}
+.contact-form h3 {
+  text-align: center;
+  font-size: 3.5rem;
+  padding-bottom: 1rem;
+}
+.contact-form input[type="text"], input[type="email"], input[type="number"], textarea{
+  display: block;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: .1px solid #ddd;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+.contact-form input[type="text"]:hover, input[type="email"]:hover, input[type="number"]:hover, textarea:hover{
+  border: .1px solid var(--blue);
+}
+.contact-form .form-btn{
+  text-align: center;
+}
+/* Contact Us CSS End */
+/* Footer Section CSS Start */
+
+.footer-content {
+  text-align: center;
+  padding: 5rem;
+}
+
+.footer-icon i {
+  font-size: 5rem;
+  margin-right: 2rem;
+  color: var(--black);
+}
+.footer-icon i:hover{
+  color: var(--blue);
+}
+.footer-text {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+/* Footer Section CSS End */
+
+
+
+
+
+
+@media (max-width: 991px){
+    html{
+      font-size: 55%;
+    }
+    .header{
+      padding: 2rem;
+    }
+
+}
+
+@media (max-width: 768px){
+  #menu-btn{
+    display: initial;
+  }
+  #menu-btn.fa-times{
+    transform: rotate(180deg);
+  }
+  .header .navbar{
+    position: absolute;
+    top: 99%; left: 0; right: 0;
+    background-color: var(--black);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .navbar a{
+    font-size: 2rem;
+    margin: 2.5rem 2rem;
+    display: block;
+  }
+
+}
+
+@media (max-width: 450px){
+  html{
+    font-size: 50%;
+  }
+
+}
